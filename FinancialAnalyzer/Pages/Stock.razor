@@ -1,0 +1,50 @@
+@page "/stock"
+@using FinancialAnalyzer.Data
+@using FinancialAnalyzer.StockApi
+@inject StockAnalyzerService StockAnalyzerService
+
+<PageTitle>Stock Analyzer</PageTitle>
+
+
+<p>
+    <label class="form-label">Stock acronym</label>
+    <InputText bind-Value="@StockName" ValueExpression="() => StockName.Value">Stock Name</InputText>
+    <button class="btn-info" onclick="@GetStockStats">Search</button>
+</p>
+
+@if (string.IsNullOrEmpty(@StockName?.Value))
+{
+    <p>
+        <em>Choose a stock.</em>
+    </p>
+}
+else
+{
+    <table class="table">
+        <thead>
+        <tr>
+            <th>TimeStamp</th>
+            <th>Price</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var forecast in @StockStats?.Prices)
+        {
+            <tr>
+                <td>@forecast.DateTime</td>
+                <td>@forecast.Value</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
+
+@code {
+    public InputText StockName { get; set; } = new InputText(){Value = "KO"};
+    private StockStats StockStats = new StockStats();
+
+    public async Task GetStockStats()
+    {
+        StockStats = await StockAnalyzerService.GetStockStatsById(StockName.Value);
+    }
+}

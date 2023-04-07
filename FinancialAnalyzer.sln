@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinancialAnalyzer", "FinancialAnalyzer\FinancialAnalyzer.csproj", "{C1751702-6FF5-412D-89DD-A278A4947E16}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlphaVantageClient", "AlphaVantageClient\AlphaVantageClient.csproj", "{8F6E24CB-15C7-42C2-AF6E-987732C30CAD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C1751702-6FF5-412D-89DD-A278A4947E16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1751702-6FF5-412D-89DD-A278A4947E16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1751702-6FF5-412D-89DD-A278A4947E16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1751702-6FF5-412D-89DD-A278A4947E16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F6E24CB-15C7-42C2-AF6E-987732C30CAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F6E24CB-15C7-42C2-AF6E-987732C30CAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F6E24CB-15C7-42C2-AF6E-987732C30CAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F6E24CB-15C7-42C2-AF6E-987732C30CAD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
